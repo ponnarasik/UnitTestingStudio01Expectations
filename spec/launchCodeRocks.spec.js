@@ -1,17 +1,18 @@
 const launchOutput = require('../launchCodeRocks.js');
+const assert = require('assert');
 
 
 describe("launchOutput", function(){
-it("returns 'Launch!' when passed a number divisible only by 2",
-function(){
+it("returns 'Launch!' when passed a number divisible only by 2",function(){
 let output =  launchOutput(2);
-assert.strictEqual
+assert.strictEqual(output, "Launch!");
 });
-expect(actual).toEqual(expected);
+it("returns 'Code' when passed a number divisible only by 3",function(){
+let output =  launchOutput(3);
+assert.strictEqual(output, "Code");
+});
+it("returns 'Launch!' when passed a number divisible only by 5",function(){
+let output =  launchOutput(5);
+assert.strictEqual(output, "Rocks!");
 })
- /*it("number divisible by 3",
-  function(){
-    let expected = 'Code!'
-    let actual = launchOutput(3)
-    expect(actual).toEqual(expected);
 });
